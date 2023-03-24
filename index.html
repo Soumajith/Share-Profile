@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Profile</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="/assests/man.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="card">
+            <div class="card-wrapper">
+                <img src="./assests/user.png" alt="">
+            </div>
+            <div class="user-name">
+                <h2>Soumajith Das</h3>
+            </div>
+            <div class="designation">
+                <h3>Aspirant Developer</h5>
+            </div>
+            <div class="buttons">
+                <button class="btn-share btn-card" onclick="openModal()">
+                    <i class="fa-solid fa-share"></i>
+                    <div>Share my profile</div>
+                </button>
+                <button class="btn-follow btn-card">
+                    <i class="fa-solid fa-heart"></i>
+                    <div>Follow me</div>
+                </button>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal-header">
+                <h1>Share My Profile</h1>
+                <div class="icon" onclick="closeModal()">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="modal-list">
+                <h3>Share this via</h3>
+                <div class="icon-container">
+                    <a href="#" class="icon" id="facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="icon" id="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="icon" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="icon" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="icon" id="telegram">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" onclick="closeModal()"></div>
+
+
+    </div>
+
+    <!-- modal class -->
+
+
+    <!-- overlay -->
+    <script src="https://kit.fontawesome.com/512a3393a0.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

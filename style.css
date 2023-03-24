@@ -1,0 +1,334 @@
+* {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle1 {
+
+    animation-name: red-animation;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    top: 20px;
+    left: 390px;
+    position: absolute;
+    padding: 80px;
+    background: rgb(248, 70, 70);
+    border-radius: 100%;
+    box-shadow: 0 0 30px 10px red;
+}
+
+.circle2 {
+    animation-name: blue-animation;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    bottom: 10px;
+    right: 300px;
+    position: absolute;
+    padding: 100px;
+    background: rgb(119, 38, 226);
+    border-radius: 100%;
+    box-shadow: 0 0 30px 10px indigo;
+}
+
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    padding: 50px 20px 50px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.card-wrapper {
+    position: relative;
+    border: solid white 1px;
+    margin: 0 130px 0 130px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+img {
+    width: 100px;
+    padding: 20px;
+}
+
+.user-name {
+    margin-top: 2em;
+}
+
+.user-name h2 {
+    font-size: 30px;
+}
+
+.designation {
+    margin-top: 3em;
+}
+
+.designation h3 {
+    font-weight: 800;
+    font-size: 18px;
+    color: rgb(156, 151, 151);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5em;
+}
+
+.btn-card {
+    display: flex;
+    background: none;
+    border: solid 1px white;
+    font-size: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 10px 0 10px;
+    color: rgb(156, 151, 151);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in;
+}
+
+.btn-card i {
+    margin-right: 20px;
+    color: rgb(156, 151, 151);
+    font-size: 15px;
+    line-height: 20px;
+    transition: color, scale 0.3s;
+}
+
+.btn-card div {
+    color: rgb(156, 151, 151);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.btn-card:hover {
+    background-color: white;
+}
+
+.btn-card:hover div {
+    color: black;
+}
+
+.btn-card:hover i {
+    scale: 1.3;
+    color: #000;
+}
+
+.modal {
+    scale: 0;
+    z-index: 1;
+    margin-top: 20px;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.656);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.8px);
+    -webkit-backdrop-filter: blur(11.8px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0 10px 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.active {
+    scale: 1.2;
+}
+
+.modal-header {
+    margin: 20px 15px 15px 15px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 1px gray;
+}
+
+.modal-header h1 {
+    font-size: 22px;
+}
+
+.modal-header i {
+    line-height: 23px;
+    font-size: 22px;
+}
+
+.modal-list h3 {
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+.icon-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icon-container a {
+    border: solid 1px gray;
+    padding: 10px 15px 10px 15px;
+    margin: 0 30px 20px 10px;
+    border-radius: 100%;
+}
+
+#facebook {
+    padding: 10px 16px 10px 16px;
+    border: solid 1px rgb(75, 75, 239);
+    transition: background-color 0.3s;
+}
+
+#facebook i {
+    color: rgb(75, 75, 239);
+    transition: color 0.3s;
+}
+
+#facebook:hover {
+    background-color: rgb(75, 75, 239);
+}
+
+#facebook:hover i {
+    color: white;
+}
+
+#twitter {
+    border: solid 1px rgb(23, 144, 192);
+    transition: background-color 0.3s;
+}
+
+#twitter i {
+    color: rgb(23, 144, 192);
+    transition: color 0.3s;
+}
+
+#twitter:hover {
+    background-color: rgb(23, 144, 192);
+}
+
+#twitter:hover i {
+    color: white;
+}
+
+#instagram {
+    border: solid 1px rgb(227, 92, 92);
+    transition: background-color 0.3s;
+}
+
+#instagram i {
+    color: rgb(227, 92, 92);
+    transition: color 0.3s;
+}
+
+#instagram:hover {
+    background-color: rgb(227, 92, 92);
+}
+
+#instagram:hover i {
+    color: white;
+}
+
+#whatsapp {
+    border: solid 1px rgb(42, 165, 42);
+    transition: background-color 0.3s;
+}
+
+#whatsapp i {
+    color: rgb(42, 165, 42);
+    transition: color 0.3s;
+}
+
+#whatsapp:hover {
+    background-color: rgb(42, 165, 42);
+}
+
+#whatsapp:hover i {
+    color: white;
+}
+
+#telegram {
+    margin-right: 20px;
+    border: solid 1px rgb(14, 121, 221);
+    transition: background-color 0.3s;
+}
+
+#telegram i {
+    color: rgb(14, 121, 221);
+    transition: color 0.3s;
+}
+
+#telegram:hover {
+    background-color: rgb(14, 121, 221);
+}
+
+#telegram:hover i {
+    color: white;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    scale: 0;
+    background: rgba(158, 152, 152, 0.3);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.4px);
+    -webkit-backdrop-filter: blur(1.4px);
+    border: 1px solid rgba(158, 152, 152, 0.3);
+}
+
+.overlayactive {
+    scale: 1;
+}
+
+@keyframes red-animation {
+    from {
+        scale: 1;
+        top: 20px;
+        left: 390px;
+    }
+
+    to {
+        scale: 1.3;
+        top: 50px;
+        left: 590px;
+    }
+}
+
+@keyframes blue-animation {
+    from {
+        scale: 1;
+        bottom: 10px;
+        right: 300px;
+    }
+
+    to {
+        scale: 1.3;
+        bottom: 40px;
+        right: 500px;
+    }
+}
